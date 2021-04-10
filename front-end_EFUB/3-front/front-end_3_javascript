@@ -1,0 +1,23 @@
+//실습 1 객체 생성
+
+
+const order = {
+  orderNum:20210410,
+  orderId:'efubfront',
+  name:'이펍',
+  address:'서울특별시 서대문구 이화여대길 52'
+}
+
+for ( let key in order){
+  console.log(`${key}:${order[key]}`);
+}
+
+//실습 2 배열 내장 함수
+let numbers=[1,2,3,4,5];
+
+for(let number of numbers){
+  number*=3;
+  if(number%2==0){
+    console.log(number);
+  }
+}
