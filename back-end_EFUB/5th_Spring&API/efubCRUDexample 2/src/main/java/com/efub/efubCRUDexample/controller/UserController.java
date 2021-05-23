@@ -10,8 +10,6 @@ import java.util.List;
 //localhost:8080/user
 @RestController
 @RequestMapping("/user")
-
-
 public class UserController {
     @Autowired
     private UserService userService;
@@ -21,7 +19,7 @@ public class UserController {
 
     //get localhost:8080/user/testId1
     //get localhost:8080/user/testId2
-
+    @CrossOrigin(origins="http://localhost:3000")
     @GetMapping("/{userid}")
     public User getUserByUserId(@PathVariable String userid){return userService.getUserByUserId(userid);}
 
