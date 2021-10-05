@@ -9,7 +9,7 @@ import java.util.List;
 
 //localhost:8080/user
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/user") //localhost:8080/user
 public class UserController {
     @Autowired
     private UserService userService;
@@ -33,6 +33,4 @@ public class UserController {
 
     @DeleteMapping("/{userid}")
     public void removeUser(@PathVariable String userid){userService.removeUser(userid);}
-
-
 }
